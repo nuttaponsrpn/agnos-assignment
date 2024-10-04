@@ -28,4 +28,4 @@
 * npm install
 * npm run dev
 
-Found sample page [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Found sample page [https://agnos-assignment-sigma.vercel.app/](https://agnos-assignment-sigma.vercel.app/) with your browser to see the result.
