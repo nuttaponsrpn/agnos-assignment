@@ -86,6 +86,7 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
         {/* Display image section */}
         <Image
           src={`/images/abdominal/${abdominalBase.base}.png`}
+          priority
           alt={abdominalBase.name}
           className="absolute"
           style={{ objectFit: "contain" }}
@@ -95,6 +96,7 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
 
         <Image
           src={`/images/abdominal/all-over-highlight.png`}
+          priority
           alt="all-over-highlight"
           className={`absolute z-30 
             ${(!disable && mouseOverPos === 7) || currentPainPoint.length === 7 ? "inline" : "hidden"}`}
@@ -108,6 +110,7 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
             <React.Fragment key={name}>
               <Image
                 src={`/images/abdominal/${description}.png`}
+                priority
                 alt={name}
                 quality={100}
                 className={`absolute opacity-45 
@@ -120,6 +123,7 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
               />
               <Image
                 src={`/images/abdominal/${highlight}.png`}
+                priority
                 alt={name}
                 className={`absolute z-30 ${currentPainPoint.includes(name as AbdominalType) ? "inline" : "hidden"}`}
                 quality={100}

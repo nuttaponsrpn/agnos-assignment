@@ -89,6 +89,7 @@ export default function Finger({
 
         {/* Display image section */}
         <Image
+          priority
           src={`/images/finger/${fingerBase.base}.png`}
           alt={fingerBase.name}
           className="absolute"
@@ -98,6 +99,7 @@ export default function Finger({
         />
 
         <Image
+          priority
           src={`/images/finger/others-highlight.png`}
           alt="others-highlight"
           className={`absolute z-30 
@@ -111,6 +113,7 @@ export default function Finger({
           fingerPicture.map(({ name, highlight, description }, index) => (
             <React.Fragment key={name}>
               <Image
+                priority
                 src={`/images/finger/${description}.png`}
                 alt={name}
                 quality={100}
@@ -123,6 +126,7 @@ export default function Finger({
                 height={418}
               />
               <Image
+                priority
                 src={`/images/finger/${highlight}.png`}
                 alt={name}
                 className={`absolute z-30 ${currentPainPoint.includes(name as FingerType) ? "inline" : "hidden"}`}

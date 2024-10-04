@@ -58,6 +58,7 @@ export default function ChangeLanguage({ pathname }: { pathname?: string | null 
                 className={`flex gap-3`}
               >
                 <Image
+                  priority
                   width={50}
                   height={12}
                   className="aspect-square w-6 h-4"
