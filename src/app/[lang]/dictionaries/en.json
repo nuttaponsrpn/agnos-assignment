@@ -1,0 +1,133 @@
+{
+  "questionaire": {
+    "patientList": "Patient List",
+    "summary": "Summary",
+    "painPointDiagram": "Pain point diagram",
+    "abdominal": "Abdominal pain",
+    "finger": "Finger pain",
+    "addNewPatient": "Add New Patient",
+    "noProblemFound": "No health problems found",
+
+    "patientInformation": "Patient Information",
+    "confirm": "Confirm",
+    "next": "Next",
+    "back": "Back",
+    "save": "Save",
+    "pleaseEnterName": "Please enter name",
+    "pleaseConfirmName": "Please confirm name",
+
+    "epigastrium": "Epigastric",
+    "luq": "Left upper abdomen",
+    "llq": "Left lower abdomen",
+    "suprapubic": "Suprapubic",
+    "rlq": "Right upper abdomen",
+    "ruq": "Right lower abdomen",
+    "umbilicus": "Umbilicus",
+
+    "pip": "Proximal phalanges",
+    "dip": "Distal phalanges",
+    "mcp": "Middle phalanges"
+  },
+  "menu": [
+    {
+      "no": 1,
+      "title": "About Us",
+      "subtitle": [
+        {
+          "title": "Agnos Origin",
+          "link": "https://www.agnoshealth.com/about/origin-agnos"
+        },
+        {
+          "title": "Awards",
+          "link": "https://www.agnoshealth.com/about/reward"
+        },
+        {
+          "title": "Our Team",
+          "link": "https://www.agnoshealth.com/about/partner"
+        },
+        {
+          "title": "Our Partners",
+          "link": "https://www.agnoshealth.com/about/partner"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "title": "Agnos Services",
+      "subtitle": [
+        {
+          "title": "AI Diagnosis",
+          "link": "https://www.agnoshealth.com/services/diagnosis-ai"
+        },
+        {
+          "title": "Search Doctors and Clinics",
+          "link": "https://www.agnoshealth.com/doctor-list"
+        },
+        {
+          "title": "Smart Hospital and Clinic",
+          "link": "https://www.agnoshealth.com/smart-hospital-and-clinics"
+        },
+        {
+          "title": "AI-based Telehealth",
+          "link": "https://www.agnoshealth.com/ai-based-telehealth"
+        },
+        {
+          "title": "Promote your Practice",
+          "link": "https://www.agnoshealth.com/promote-your-practice"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "title": "Book a Doctor",
+      "subtitle": [
+        {
+          "title": "Search Doctors",
+          "link": "https://www.agnoshealth.com/doctor-list"
+        },
+        {
+          "title": "Search Clinics",
+          "link": "https://www.agnoshealth.com/clinic-and-hospital-lists"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "title": "Articles",
+      "subtitle": [
+        {
+          "title": "Articles",
+          "link": "https://www.agnoshealth.com/articles"
+        },
+        {
+          "title": "Diseases Information",
+          "link": "https://www.agnoshealth.com/diseases"
+        },
+        {
+          "title": "Symptoms Information",
+          "link": "https://www.agnoshealth.com/symptoms"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "title": "Forum",
+      "link": "https://www.agnoshealth.com/forums",
+      "subtitle": []
+    },
+    {
+      "no": 6,
+      "title": "Join Our Team",
+      "subtitle": [
+        {
+          "title": "Join Our Team",
+          "link": "https://forms.clickup.com/3793803/f/3krwb-2562/2FD3KS5Z4B129C2PBK"
+        },
+        {
+          "title": "For Corporate",
+          "link": "https://forms.clickup.com/3793803/f/3krwb-4182/OE588HQ19NXUB4QAV3"
+        }
+      ]
+    }
+  ]
+}

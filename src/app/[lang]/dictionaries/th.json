@@ -1,0 +1,133 @@
+{
+  "questionaire": {
+    "patientList": "รายชื่อผู้ป่วย",
+    "summary": "สรุปข้อมูลผู้ป่วย",
+    "painPointDiagram": "แผนภาพแสดงอาการ",
+    "abdominal": "อาการปวดท้อง",
+    "finger": "อาการปวดมือ",
+    "addNewPatient": "เพิ่มผู้ป่วยใหม่",
+    "noProblemFound": "ไม่พบอาการผิดปกติ",
+
+    "patientInformation": "ข้อมูลผู้ป่วย",
+    "confirm": "ตกลง",
+    "next": "ถัดไป",
+    "back": "ย้อนกลับ",
+    "save": "บันทึก",
+    "pleaseEnterName": "โปรดระบุชื่อ",
+    "pleaseConfirmName": "โปรดยืนยันชื่อ",
+
+    "epigastrium": "ลิ้นปี่",
+    "luq": "ช่องท้องด้านซ้ายบน",
+    "llq": "ช่องท้องด้านซ้ายล่าง",
+    "suprapubic": "ท้องน้อย",
+    "rlq": "ช่องท้องด้านขวาบน",
+    "ruq": "ช่องท้องด้านขวาล่าง",
+    "umbilicus": "สะดือ",
+
+    "pip": "ข้อนิ้วมือส่วนต้น",
+    "dip": "ข้อนิ้วส่วนปลาย",
+    "mcp": "ข้อนิ้วโคนมือ"
+  },
+  "menu": [
+    {
+      "no": 1,
+      "title": "เกี่ยวกับเรา",
+      "subtitle": [
+        {
+          "title": "ที่มาของ Agnos",
+          "link": "https://www.agnoshealth.com/about/origin-agnos"
+        },
+        {
+          "title": "รางวัลที่ได้รับ",
+          "link": "https://www.agnoshealth.com/about/reward"
+        },
+        {
+          "title": "ทีมของเรา",
+          "link": "https://www.agnoshealth.com/about/partner"
+        },
+        {
+          "title": "พันธมิตรของเรา",
+          "link": "https://www.agnoshealth.com/about/partner"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "title": "บริการของ Agnos",
+      "subtitle": [
+        {
+          "title": "AI วิเคราะห์โรค",
+          "link": "https://www.agnoshealth.com/services/diagnosis-ai"
+        },
+        {
+          "title": "ค้นหาแพทย์และคลินิก",
+          "link": "https://www.agnoshealth.com/doctor-list"
+        },
+        {
+          "title": "ระบบโรงพยาบาลอัจฉริยะ",
+          "link": "https://www.agnoshealth.com/smart-hospital-and-clinics"
+        },
+        {
+          "title": "การแพทย์ทางไกลโดย AI",
+          "link": "https://www.agnoshealth.com/ai-based-telehealth"
+        },
+        {
+          "title": "โปรโมทบริการของคุณ",
+          "link": "https://www.agnoshealth.com/promote-your-practice"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "title": "นัดหมายแพทย์",
+      "subtitle": [
+        {
+          "title": "ค้นหาแพทย์",
+          "link": "https://www.agnoshealth.com/doctor-list"
+        },
+        {
+          "title": "ค้นหาสถานพยาบาล",
+          "link": "https://www.agnoshealth.com/clinic-and-hospital-lists"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "title": "คลังความรู้สุขภาพ",
+      "subtitle": [
+        {
+          "title": "บทความ",
+          "link": "https://www.agnoshealth.com/articles"
+        },
+        {
+          "title": "ความรู้เกี่ยวกับโรค",
+          "link": "https://www.agnoshealth.com/diseases"
+        },
+        {
+          "title": "ความรู้เกี่ยวกับอาการ",
+          "link": "https://www.agnoshealth.com/symptoms"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "title": "กระทู้ถามแพทย์",
+      "link": "https://www.agnoshealth.com/forums",
+      "subtitle": []
+    },
+    {
+      "no": 6,
+      "title": "ร่วมงานกับเรา",
+      "subtitle": [
+        {
+          "title": "ร่วมทีม",
+          "link": "https://forms.clickup.com/3793803/f/3krwb-2562/2FD3KS5Z4B129C2PBK"
+        },
+        {
+          "title": "สำหรับองค์กร",
+          "link": "https://forms.clickup.com/3793803/f/3krwb-4182/OE588HQ19NXUB4QAV3"
+        }
+      ]
+    }
+  ]
+}
