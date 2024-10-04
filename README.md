@@ -1,7 +1,7 @@
 ## About
-* Thihs project is an agnos candidate assignment to detect pain locations in the abdominal area and finger area.
+* This project is an agnos candidate assignment to detect pain locations in the abdominal area and finger area.
 
-## Next plan
+## Next plan (if pass)
 
 * Develop storybook for document and unit testing
 
