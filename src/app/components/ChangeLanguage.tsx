@@ -14,7 +14,6 @@ export default function ChangeLanguage({ pathname }: { pathname?: string | null 
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
-    console.log("first");
     setAnchorEl(event.currentTarget);
   };
 
