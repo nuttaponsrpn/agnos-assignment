@@ -34,13 +34,13 @@ export default function Page() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="!pb-20">
           <Button
+            disableElevation
             variant="text"
             onClick={() => {
               window.location.href += "/questionaire";
             }}
-            disableElevation
           >
-            <Image src="/assets/logo.webp" height={57} width={152} alt="Logo" />
+            <Image alt="Logo" height={57} src="/assets/logo.webp" width={152} />
           </Button>
           <Typography variant="h5"> Countdown : {displayCountdown}</Typography>
         </div>

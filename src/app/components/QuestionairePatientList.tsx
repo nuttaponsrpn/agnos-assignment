@@ -80,7 +80,7 @@ export default function QuestionairePatientList({ dictionary, onSelectPatient }:
 
   return (
     <Card className="w-full h-full flex flex-col relative overflow-hidden" elevation={2}>
-      <CardHeader title={dictionary.patientList} className="border-b-2 border-b-slate-200 z-20" />
+      <CardHeader className="border-b-2 border-b-slate-200 z-20" title={dictionary.patientList} />
       <List className="overflow-auto">
         {patientList.map(({ name, painPoint }, index) => (
           <ListItem disablePadding key={name}>
@@ -89,7 +89,7 @@ export default function QuestionairePatientList({ dictionary, onSelectPatient }:
               onClick={() => selectPatient(index, { name, painPoint })}
             >
               <ListItemIcon>
-                <Avatar sx={{ bgcolor: generateColor(name) }} alt={name}>
+                <Avatar alt={name} sx={{ bgcolor: generateColor(name) }}>
                   {name.charAt(0)}
                 </Avatar>
               </ListItemIcon>

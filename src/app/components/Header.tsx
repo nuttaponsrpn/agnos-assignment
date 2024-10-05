@@ -34,7 +34,7 @@ export default function Header({ dictionary, pathname }: HeaderProps) {
         `}
       >
         <nav className="relative z-50 flex w-full items-center justify-between gap-6">
-          <Image alt="logo" priority src="/assets/logo.webp" height={57} width={152} />
+          <Image priority alt="logo" height={57} src="/assets/logo.webp" width={152} />
 
           <StyledMenu className={!isBpUpXl && !isOpenMenu ? "hidden" : "block"}>
             <div
@@ -93,18 +93,18 @@ export default function Header({ dictionary, pathname }: HeaderProps) {
                       `}
                     >
                       {subtitle.map(({ title: subTitle, link: subLink }) => (
-                        <li key={subTitle} className="border-b border-solid">
+                        <li className="border-b border-solid" key={subTitle}>
                           <a
                             href={subLink || "#"}
                             target="_blank"
                             title={subTitle}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                            }}
                             className={`
                               header-nav-link header-nav-sub-link before:h-0 before:block before:content-[attr(title)]
                               before:font-bold before:overflow-hidden before:invisible !w-fit
                             `}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                            }}
                           >
                             {subTitle}
                           </a>
@@ -122,8 +122,8 @@ export default function Header({ dictionary, pathname }: HeaderProps) {
 
             <IconButton
               disableRipple
-              color="primary"
               className={`!p-0 xl:!hidden z-10 !mx-3`}
+              color="primary"
               onClick={() => setIsOpenMenu((prev) => !prev)}
             >
               <MenuRoundedIcon className="aspect-square !text-3xl " />

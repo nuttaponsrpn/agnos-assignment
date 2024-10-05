@@ -74,12 +74,13 @@ export default function QuestionaireDialog({ dictionary, open, onClose, onSubmit
 
   return (
     <Dialog
-      open={open}
-      aria-labelledby="add-patient-info-dialog"
       aria-describedby="patient-detail-contain-pain-location-of-abdominal-and-finger-area"
+      aria-labelledby="add-patient-info-dialog"
+      fullScreen={isBpBelowMd}
+      open={open}
       scroll="paper"
-      fullScreen={isBpBelowMd}>
-      <DialogTitle id="questionaire-title-dialog" className="flex items-center justify-between gap-3 !pr-2">
+    >
+      <DialogTitle className="flex items-center justify-between gap-3 !pr-2" id="questionaire-title-dialog">
         <div className="mt-auto">
           <span>{dictionary.patientInformation}</span>
 
@@ -104,12 +105,12 @@ export default function QuestionaireDialog({ dictionary, open, onClose, onSubmit
           {!isConfirmName && (
             <React.Fragment>
               <TextField
-                id="patient-name"
-                placeholder={dictionary.pleaseEnterName}
-                variant="standard"
-                value={patientInfo.name}
                 error={isTouch && !patientInfo.name.trim()}
                 helperText={isTouch && !patientInfo.name.trim() ? "Name can't be blank" : ""}
+                id="patient-name"
+                placeholder={dictionary.pleaseEnterName}
+                value={patientInfo.name}
+                variant="standard"
                 onBlur={() => setIsTouch(true)}
                 onChange={(val) =>
                   setPatientInfo((prev) => ({
@@ -126,7 +127,7 @@ export default function QuestionaireDialog({ dictionary, open, onClose, onSubmit
         </div>
 
         {step === 0 && <Abdominal dictionary={dictionary} onSubmit={saveAbdominal} />}
-        {step === 1 && <Finger dictionary={dictionary} onSubmit={saveFinger} onClickBack={() => setStep(0)} />}
+        {step === 1 && <Finger dictionary={dictionary} onClickBack={() => setStep(0)} onSubmit={saveFinger} />}
 
         {alertMessage && (
           <Alert className="w-full p-3 absolute bottom-0" severity="error">

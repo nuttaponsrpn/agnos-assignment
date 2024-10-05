@@ -66,89 +66,89 @@ export default function Finger({
         {/* Dip selection */}
         <DipSection
           className={disable ? "!cursor-default" : ""}
-          onMouseOver={() => setMouseOverPos(0)}
-          onMouseOut={() => setMouseOverPos(-1)}
           onClick={() => handleSelection("dip")}
+          onMouseOut={() => setMouseOverPos(-1)}
+          onMouseOver={() => setMouseOverPos(0)}
         />
 
         {/* Pip selection */}
         <PipSection
           className={disable ? "!cursor-default" : ""}
-          onMouseOver={() => setMouseOverPos(1)}
-          onMouseOut={() => setMouseOverPos(-1)}
           onClick={() => handleSelection("pip")}
+          onMouseOut={() => setMouseOverPos(-1)}
+          onMouseOver={() => setMouseOverPos(1)}
         />
 
         {/* Mcp selection */}
         <McpSection
           className={disable ? "!cursor-default" : ""}
-          onMouseOver={() => setMouseOverPos(2)}
-          onMouseOut={() => setMouseOverPos(-1)}
           onClick={() => handleSelection("mcp")}
+          onMouseOut={() => setMouseOverPos(-1)}
+          onMouseOver={() => setMouseOverPos(2)}
         />
 
         <AllButton
           className={`
             ${disable ? "!cursor-default" : ""}
           `}
-          onMouseOver={() => setMouseOverPos(4)}
-          onMouseOut={() => setMouseOverPos(-1)}
           onClick={handleSelectAll}
+          onMouseOut={() => setMouseOverPos(-1)}
+          onMouseOver={() => setMouseOverPos(4)}
         />
 
         {/* Display image section */}
         <Image
           priority
-          src={`/images/finger/${fingerBase.base}.png`}
           alt={fingerBase.name}
           className="absolute"
+          height={418}
+          src={`/images/finger/${fingerBase.base}.png`}
           style={{ objectFit: "contain" }}
           width={355}
-          height={418}
         />
 
         <Image
           priority
-          src={`/images/finger/others-highlight.png`}
           alt="others-highlight"
+          height={418}
+          quality={100}
+          src={`/images/finger/others-highlight.png`}
+          style={{ objectFit: "contain" }}
+          width={355}
           className={`
             absolute z-30
             ${!disable && (mouseOverPos === 4 || currentPainPoint.length === 3) ? "inline" : "hidden"}
           `}
-          quality={100}
-          style={{ objectFit: "contain" }}
-          width={355}
-          height={418}
         />
         {!!fingerPicture.length &&
           fingerPicture.map(({ name, highlight, description }, index) => (
             <React.Fragment key={name}>
               <Image
                 priority
-                src={`/images/finger/${description}.png`}
                 alt={name}
+                height={418}
                 quality={100}
+                src={`/images/finger/${description}.png`}
+                style={{ objectFit: "contain" }}
+                width={355}
                 className={`
                   absolute opacity-45
                   ${mouseOverPos === index ? "!opacity-100 z-20" : ""}
                   ${currentPainPoint.length === 3 ? "hidden" : "inline"}
                 `}
-                style={{ objectFit: "contain" }}
-                width={355}
-                height={418}
               />
               <Image
                 priority
-                src={`/images/finger/${highlight}.png`}
                 alt={name}
+                height={418}
+                quality={100}
+                src={`/images/finger/${highlight}.png`}
+                style={{ objectFit: "contain" }}
+                width={355}
                 className={`
                   absolute z-30
                   ${currentPainPoint.includes(name as FingerType) ? "inline" : "hidden"}
                 `}
-                quality={100}
-                style={{ objectFit: "contain" }}
-                width={355}
-                height={418}
               />
             </React.Fragment>
           ))}

@@ -9,6 +9,19 @@
   },
   "plugins": ["readable-tailwind"],
   "rules": {
+    "react/jsx-sort-props": [
+      1,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "shorthandLast": false,
+        "multiline": "last",
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": false,
+        "locale": "auto"
+      }
+    ],
     "readable-tailwind/multiline": [
       "warn",
       {

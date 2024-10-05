@@ -60,20 +60,20 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
         {/* Body-pain part selection */}
         <CircleCenter
           className={disable ? "!cursor-default" : ""}
-          onMouseOver={() => setMouseOverPos(6)}
-          onMouseOut={() => setMouseOverPos(-1)}
           onClick={() => handleSelection("umbilicus")}
+          onMouseOut={() => setMouseOverPos(-1)}
+          onMouseOver={() => setMouseOverPos(6)}
         />
         <CircleSection>
           <ul className="circle">
             {["epigastrium", "luq", "llq", "suprapubic", "rlq", "ruq"].map((name, index) => (
-              <li key={name + index} className={disable ? "!cursor-default" : ""}>
+              <li className={disable ? "!cursor-default" : ""} key={name + index}>
                 <div
                   className="text"
-                  onMouseOver={() => setMouseOverPos(index)}
-                  onMouseOut={() => setMouseOverPos(-1)}
-                  onClick={() => handleSelection(name as AbdominalType)}
                   id={`${name}selection`}
+                  onClick={() => handleSelection(name as AbdominalType)}
+                  onMouseOut={() => setMouseOverPos(-1)}
+                  onMouseOver={() => setMouseOverPos(index)}
                 />
               </li>
             ))}
@@ -82,64 +82,64 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
 
         <AllButton
           className={disable ? "!cursor-default" : ""}
-          onMouseOver={() => setMouseOverPos(7)}
-          onMouseOut={() => setMouseOverPos(-1)}
           onClick={handleSelectAll}
+          onMouseOut={() => setMouseOverPos(-1)}
+          onMouseOver={() => setMouseOverPos(7)}
         />
 
         {/* Display image section */}
         <Image
-          src={`/images/abdominal/${abdominalBase.base}.png`}
           priority
           alt={abdominalBase.name}
           className="absolute"
+          height={418}
+          src={`/images/abdominal/${abdominalBase.base}.png`}
           style={{ objectFit: "contain" }}
           width={355}
-          height={418}
         />
 
         <Image
-          src={`/images/abdominal/all-over-highlight.png`}
           priority
           alt="all-over-highlight"
+          height={418}
+          quality={100}
+          src={`/images/abdominal/all-over-highlight.png`}
+          style={{ objectFit: "contain" }}
+          width={355}
           className={`
             absolute z-30
             ${(!disable && mouseOverPos === 7) || currentPainPoint.length === 7 ? "inline" : "hidden"}
           `}
-          quality={100}
-          style={{ objectFit: "contain" }}
-          width={355}
-          height={418}
         />
         {!!abdominalPicture.length &&
           abdominalPicture.map(({ name, highlight, description }, index) => (
             <React.Fragment key={name}>
               <Image
-                src={`/images/abdominal/${description}.png`}
                 priority
                 alt={name}
+                height={418}
                 quality={100}
+                src={`/images/abdominal/${description}.png`}
+                style={{ objectFit: "contain" }}
+                width={355}
                 className={`
                   absolute opacity-45
                   ${mouseOverPos === index ? "!opacity-100 z-20" : ""}
                   ${currentPainPoint.length === 7 ? "hidden" : "inline"}
                 `}
-                style={{ objectFit: "contain" }}
-                width={355}
-                height={418}
               />
               <Image
-                src={`/images/abdominal/${highlight}.png`}
                 priority
                 alt={name}
+                height={418}
+                quality={100}
+                src={`/images/abdominal/${highlight}.png`}
+                style={{ objectFit: "contain" }}
+                width={355}
                 className={`
                   absolute z-30
                   ${currentPainPoint.includes(name as AbdominalType) ? "inline" : "hidden"}
                 `}
-                quality={100}
-                style={{ objectFit: "contain" }}
-                width={355}
-                height={418}
               />
             </React.Fragment>
           ))}

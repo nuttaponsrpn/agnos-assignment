@@ -12,7 +12,7 @@ type QuestionaireDetailProps = {
 export default function QuestionaireSummary({ dictionary, painPoint }: QuestionaireDetailProps) {
   return (
     <Card className="w-full h-full !overflow-y-auto !bg-transparent" elevation={2}>
-      <Typography variant="h5" className="p-4 border-b-2 border-b-slate-200">
+      <Typography className="p-4 border-b-2 border-b-slate-200" variant="h5">
         {dictionary.painPointDiagram}
       </Typography>
       {/* <CardHeader title="Detail" /> */}
@@ -21,14 +21,14 @@ export default function QuestionaireSummary({ dictionary, painPoint }: Questiona
           {/* Abdominal */}
           <div className="relative xl:absolute xl:left-[-20px]">
             <div className="h-[500px] xl:h-full">
-              <Abdominal dictionary={dictionary} disable defaultPainPoint={painPoint?.abdominal} />
+              <Abdominal disable defaultPainPoint={painPoint?.abdominal} dictionary={dictionary} />
             </div>
           </div>
 
           {/* Finger */}
           <div className="relative xl:absolute xl:right-[-20px]">
             <div className="h-[500px] xl:h-full">
-              <Finger dictionary={dictionary} disable defaultPainPoint={painPoint?.finger} />
+              <Finger disable defaultPainPoint={painPoint?.finger} dictionary={dictionary} />
             </div>
           </div>
         </div>

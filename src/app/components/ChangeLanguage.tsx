@@ -24,18 +24,18 @@ export default function ChangeLanguage({ pathname }: { pathname?: string | null 
   return (
     <div className="relative">
       <div
-        className="group flex gap-3 cursor-pointer items-center justify-center"
-        aria-owns={!!anchorEl ? "mouse-over-popover" : undefined}
         aria-haspopup="true"
+        aria-owns={!!anchorEl ? "mouse-over-popover" : undefined}
+        className="group flex gap-3 cursor-pointer items-center justify-center"
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
         <Image
-          width={50}
-          height={12}
-          className="aspect-square w-6 h-4"
-          src={`/assets/${!hasLocale || locale === "th" ? "th" : "en"}.webp`}
           alt={`lanuage ${!hasLocale || locale === "th" ? "th" : "en"}`}
+          className="aspect-square w-6 h-4"
+          height={12}
+          src={`/assets/${!hasLocale || locale === "th" ? "th" : "en"}.webp`}
+          width={50}
         />
 
         <IconButton disableRipple className="!p-0 group-hover:rotate-180">
@@ -53,19 +53,19 @@ export default function ChangeLanguage({ pathname }: { pathname?: string | null 
           onMouseLeave={handlePopoverClose}
         >
           {locales.map((lng) => (
-            <div key={lng} className="last:pt-2">
+            <div className="last:pt-2" key={lng}>
               <a
+                className={`flex gap-3`}
                 href={`${lng === "th" ? (restPath ? "" : "/") : `/${lng}`}${restPath}`}
                 key={lng}
-                className={`flex gap-3`}
               >
                 <Image
                   priority
-                  width={50}
-                  height={12}
-                  className="aspect-square w-6 h-4"
-                  src={`/assets/${lng}.webp`}
                   alt={`lanuage ${lng}`}
+                  className="aspect-square w-6 h-4"
+                  height={12}
+                  src={`/assets/${lng}.webp`}
+                  width={50}
                 />
                 {lng.toUpperCase()}
               </a>

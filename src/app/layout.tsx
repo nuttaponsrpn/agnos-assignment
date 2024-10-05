@@ -62,7 +62,7 @@ export default async function RootLayout({
             {/* Background image */}
             <div className="absolute bottom-0 block w-full h-80 z-0">
               <div className="relative w-full h-full">
-                <Image src={MedicalBG} alt="background" className="w-full h-80 relative z-0" />
+                <Image alt="background" className="w-full h-80 relative z-0" src={MedicalBG} />
               </div>
             </div>
           </ThemeProvider>

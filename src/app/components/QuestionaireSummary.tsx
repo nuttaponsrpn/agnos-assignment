@@ -9,7 +9,7 @@ type QuestionaireSummaryProps = {
 export default function QuestionaireSummary({ dictionary, painPoint }: QuestionaireSummaryProps) {
   return (
     <Card className="w-full h-full !bg-transparent" elevation={2}>
-      <CardHeader title={dictionary.summary} className="border-b-2 border-b-slate-200" />
+      <CardHeader className="border-b-2 border-b-slate-200" title={dictionary.summary} />
 
       {!!painPoint && (
         <CardContent className="flex flex-row md:flex-col gap-12">
