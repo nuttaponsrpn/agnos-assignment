@@ -101,7 +101,10 @@ export default function QuestionairePatientList({ dictionary, onSelectPatient }:
 
       <CardActions
         disableSpacing
-        className="md:mt-auto z-30 bg-transparent mx-auto md:border-t-2 border-t-slate-200 w-full absolute md:relative !justify-end md:!justify-center mt-2"
+        className={`
+          md:mt-auto z-30 bg-transparent mx-auto md:border-t-2 border-t-slate-200 w-full absolute md:relative
+          !justify-end md:!justify-center mt-2
+        `}
       >
         <Button aria-label="add new patient" className="flex gap-2 md:w-full" onClick={() => setIsOpenDialog(true)}>
           <AddCircleRoundedIcon color="primary" /> <span>{dictionary.addNewPatient}</span>

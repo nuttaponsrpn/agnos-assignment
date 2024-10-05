@@ -8,6 +8,7 @@ type QuestionaireDetailProps = {
   dictionary: DictionaryQuestionaire;
   painPoint?: PainPoint;
 };
+
 export default function QuestionaireSummary({ dictionary, painPoint }: QuestionaireDetailProps) {
   return (
     <Card className="w-full h-full !overflow-y-auto !bg-transparent" elevation={2}>

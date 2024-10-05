@@ -49,12 +49,18 @@ export default function QuestionaireDialog({ dictionary, open, onClose, onSubmit
       return;
     }
 
-    setPatientInfo((prev) => ({ ...prev, painPoint: { ...prev.painPoint, abdominal: painPoint } }));
+    setPatientInfo((prev) => ({
+      ...prev,
+      painPoint: { ...prev.painPoint, abdominal: painPoint },
+    }));
     setStep((prev) => prev + 1);
   }
 
   function saveFinger(painPoint: FingerType[]) {
-    const updatedPatientInfo = { ...patientInfo, painPoint: { ...patientInfo.painPoint, finger: painPoint } };
+    const updatedPatientInfo = {
+      ...patientInfo,
+      painPoint: { ...patientInfo.painPoint, finger: painPoint },
+    };
     setPatientInfo(updatedPatientInfo);
     onSubmit(updatedPatientInfo);
   }
@@ -72,8 +78,7 @@ export default function QuestionaireDialog({ dictionary, open, onClose, onSubmit
       aria-labelledby="add-patient-info-dialog"
       aria-describedby="patient-detail-contain-pain-location-of-abdominal-and-finger-area"
       scroll="paper"
-      fullScreen={isBpBelowMd}
-    >
+      fullScreen={isBpBelowMd}>
       <DialogTitle id="questionaire-title-dialog" className="flex items-center justify-between gap-3 !pr-2">
         <div className="mt-auto">
           <span>{dictionary.patientInformation}</span>
@@ -106,7 +111,12 @@ export default function QuestionaireDialog({ dictionary, open, onClose, onSubmit
                 error={isTouch && !patientInfo.name.trim()}
                 helperText={isTouch && !patientInfo.name.trim() ? "Name can't be blank" : ""}
                 onBlur={() => setIsTouch(true)}
-                onChange={(val) => setPatientInfo((prev) => ({ ...prev, name: val.target.value }))}
+                onChange={(val) =>
+                  setPatientInfo((prev) => ({
+                    ...prev,
+                    name: val.target.value,
+                  }))
+                }
               />
               <Button className="!p-0 h-fit" onClick={handleConfirmName}>
                 {dictionary.confirm}

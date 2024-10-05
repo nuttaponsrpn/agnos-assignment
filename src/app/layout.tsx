@@ -42,7 +42,12 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
+      <body
+        className={`
+          ${roboto.variable}
+          antialiased
+        `}
+      >
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />

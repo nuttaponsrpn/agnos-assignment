@@ -6,7 +6,10 @@ import React, { useState } from "react";
 import { DictionaryQuestionaire } from "../types/Dictionary";
 import { FingerType, QuestionairePictureBaseLocation, QuestionairePictureLocation } from "../types/QuestionaireForm";
 
-const fingerBase: Readonly<QuestionairePictureBaseLocation> = { name: "base", base: "default-finger" };
+const fingerBase: Readonly<QuestionairePictureBaseLocation> = {
+  name: "base",
+  base: "default-finger",
+};
 
 const fingerPicture: Readonly<QuestionairePictureLocation[]> = [
   { name: "dip", highlight: "dip-highlight", description: "dip-active" },
@@ -55,7 +58,11 @@ export default function Finger({
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center relative aspect-auto h-full w-full md:h-[432px] md:w-[500px]">
+      <div
+        className={`
+          flex flex-col items-center justify-center relative aspect-auto h-full w-full md:h-[432px] md:w-[500px]
+        `}
+      >
         {/* Dip selection */}
         <DipSection
           className={disable ? "!cursor-default" : ""}
@@ -81,7 +88,9 @@ export default function Finger({
         />
 
         <AllButton
-          className={`${disable ? "!cursor-default" : ""}`}
+          className={`
+            ${disable ? "!cursor-default" : ""}
+          `}
           onMouseOver={() => setMouseOverPos(4)}
           onMouseOut={() => setMouseOverPos(-1)}
           onClick={handleSelectAll}
@@ -102,8 +111,10 @@ export default function Finger({
           priority
           src={`/images/finger/others-highlight.png`}
           alt="others-highlight"
-          className={`absolute z-30 
-            ${!disable && (mouseOverPos === 4 || currentPainPoint.length === 3) ? "inline" : "hidden"}`}
+          className={`
+            absolute z-30
+            ${!disable && (mouseOverPos === 4 || currentPainPoint.length === 3) ? "inline" : "hidden"}
+          `}
           quality={100}
           style={{ objectFit: "contain" }}
           width={355}
@@ -117,10 +128,11 @@ export default function Finger({
                 src={`/images/finger/${description}.png`}
                 alt={name}
                 quality={100}
-                className={`absolute opacity-45 
-                      ${mouseOverPos === index ? "!opacity-100 z-20" : ""}
-                      ${currentPainPoint.length === 3 ? "hidden" : "inline"}
-                  `}
+                className={`
+                  absolute opacity-45
+                  ${mouseOverPos === index ? "!opacity-100 z-20" : ""}
+                  ${currentPainPoint.length === 3 ? "hidden" : "inline"}
+                `}
                 style={{ objectFit: "contain" }}
                 width={355}
                 height={418}
@@ -129,7 +141,10 @@ export default function Finger({
                 priority
                 src={`/images/finger/${highlight}.png`}
                 alt={name}
-                className={`absolute z-30 ${currentPainPoint.includes(name as FingerType) ? "inline" : "hidden"}`}
+                className={`
+                  absolute z-30
+                  ${currentPainPoint.includes(name as FingerType) ? "inline" : "hidden"}
+                `}
                 quality={100}
                 style={{ objectFit: "contain" }}
                 width={355}

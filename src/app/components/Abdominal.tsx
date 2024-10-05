@@ -52,7 +52,11 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center relative aspect-auto h-full w-full md:h-[432px] md:w-[500px]">
+      <div
+        className={`
+          flex flex-col items-center justify-center relative aspect-auto h-full w-full md:h-[432px] md:w-[500px]
+        `}
+      >
         {/* Body-pain part selection */}
         <CircleCenter
           className={disable ? "!cursor-default" : ""}
@@ -98,8 +102,10 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
           src={`/images/abdominal/all-over-highlight.png`}
           priority
           alt="all-over-highlight"
-          className={`absolute z-30 
-            ${(!disable && mouseOverPos === 7) || currentPainPoint.length === 7 ? "inline" : "hidden"}`}
+          className={`
+            absolute z-30
+            ${(!disable && mouseOverPos === 7) || currentPainPoint.length === 7 ? "inline" : "hidden"}
+          `}
           quality={100}
           style={{ objectFit: "contain" }}
           width={355}
@@ -113,10 +119,11 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
                 priority
                 alt={name}
                 quality={100}
-                className={`absolute opacity-45 
-                      ${mouseOverPos === index ? "!opacity-100 z-20" : ""}
-                      ${currentPainPoint.length === 7 ? "hidden" : "inline"}
-                  `}
+                className={`
+                  absolute opacity-45
+                  ${mouseOverPos === index ? "!opacity-100 z-20" : ""}
+                  ${currentPainPoint.length === 7 ? "hidden" : "inline"}
+                `}
                 style={{ objectFit: "contain" }}
                 width={355}
                 height={418}
@@ -125,7 +132,10 @@ export default function Abdominal({ dictionary, defaultPainPoint = [], disable =
                 src={`/images/abdominal/${highlight}.png`}
                 priority
                 alt={name}
-                className={`absolute z-30 ${currentPainPoint.includes(name as AbdominalType) ? "inline" : "hidden"}`}
+                className={`
+                  absolute z-30
+                  ${currentPainPoint.includes(name as AbdominalType) ? "inline" : "hidden"}
+                `}
                 quality={100}
                 style={{ objectFit: "contain" }}
                 width={355}
